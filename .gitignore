@@ -1,5 +1,7 @@
 #ignore below files
+*.bat
 *.exe
+*.xlsx
 #ignore folder
 .idea
 __pycache__
