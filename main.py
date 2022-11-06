@@ -18,6 +18,14 @@ FORMULAS = [
     f'=ROUNDDOWN((E{MAX_ROW}+(C{MAX_ROW + 1}*0.2)),0)',
     f'=ROUNDDOWN((F{MAX_ROW}+(C{MAX_ROW + 1}*0.3)),0)',
     f'=ROUNDUP((G{MAX_ROW}+(C{MAX_ROW + 1}*0.5)),0)',
+    '',
+    f'=ROUNDUP(G{MAX_ROW+1}*0.6,0)',
+    f'=ROUNDDOWN(G{MAX_ROW+1}*0.4,0)',
+    '',
+    f'=ROUNDUP(I{MAX_ROW+1}*0.4,0)',
+    f'=ROUNDUP(I{MAX_ROW+1}*0.25,0)',
+    f'=ROUNDDOWN(I{MAX_ROW+1}*0.2,0)',
+    f'=ROUNDDOWN(I{MAX_ROW+1}*0.15,0)',
 ]
 
 dataToBeAdded = [int(input()), ]
@@ -52,7 +60,7 @@ pie.dataLabels.showPercent = True
 
 pie.title = 'Salary Breakup'
 
-ws.add_chart(pie, 'K2')
+ws.add_chart(pie, 'Q5')
 wb.save('MoneyControl.xlsx')
 wb.close()
 
