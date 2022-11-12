@@ -6,7 +6,7 @@ If downloaded, then extract the content of the .zip file at a location.
 
 Now open the xlxs file either in MS Office or upload it to google drive and open it in google sheets
 
-After opening the file enter the last salary which you want to consider as a base for distribution into various categories and also enter any date, you remember when that salary was received.
+After opening the file enter distribution percentages if you want or else leave it as it is, after that enter the last salary which you want to consider as a base for distribution into various categories, and also enter any date, you remember when that salary was received.
 
 Your salary will be distributed based on the percentage you provide for various categories, if NOT provided then distribution will occur as of below.
 
