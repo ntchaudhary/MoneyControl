@@ -21,20 +21,21 @@ ws = wb.active
 MAX_ROW = ws.max_row
 
 FORMULAS = [
-    date.today().strftime('%d-%m-%Y'),
-    f'=(A{MAX_ROW + 1}-A{MAX_ROW})',
-    f'=ROUND((C{MAX_ROW + 1}/A{MAX_ROW})*100,0)',
-    f'=ROUNDDOWN((E{MAX_ROW}+(C{MAX_ROW + 1}*0.2)),0)',
-    f'=ROUNDDOWN((F{MAX_ROW}+(C{MAX_ROW + 1}*0.3)),0)',
-    f'=ROUNDUP((G{MAX_ROW}+(C{MAX_ROW + 1}*0.5)),0)',
-    'black',
-    f'=ROUNDUP(G{MAX_ROW + 1}*0.6,0)',
-    f'=ROUNDDOWN(G{MAX_ROW + 1}*0.4,0)',
-    'black',
-    f'=ROUNDUP(I{MAX_ROW + 1}*0.4,0)',
-    f'=ROUNDUP(I{MAX_ROW + 1}*0.25,0)',
-    f'=ROUNDDOWN(I{MAX_ROW + 1}*0.2,0)',
-    f'=ROUNDDOWN(I{MAX_ROW + 1}*0.15,0)',
+    date.today().strftime('%d-%m-%Y'),                     # date
+    f'=(A{MAX_ROW + 1}-A{MAX_ROW})',                       # salary increment 
+    f'=ROUND((C{MAX_ROW + 1}/A{MAX_ROW})*100,0)',          # % increase
+    '',
+    f'=ROUNDDOWN((F{MAX_ROW}+(C{MAX_ROW + 1}*S3/100)),0)', # Expenses
+    f'=ROUNDDOWN((G{MAX_ROW}+(C{MAX_ROW + 1}*T3/100)),0)', # Want
+    f'=ROUNDUP((H{MAX_ROW}+(C{MAX_ROW + 1}*U3/100)),0)',   # Invest
+    '',
+    f'=ROUNDUP(H{MAX_ROW + 1}*J3/100,0)',                  # Equity
+    f'=ROUNDDOWN(H{MAX_ROW + 1}*K3/100,0)',                # Debt
+    '',
+    f'=ROUNDUP(J{MAX_ROW + 1}*M3/100,0)',                  # index
+    f'=ROUNDUP(J{MAX_ROW + 1}*N3/100,0)',                  # flexi
+    f'=ROUNDDOWN(J{MAX_ROW + 1}*O3/100,0)',                # mid
+    f'=ROUNDDOWN(J{MAX_ROW + 1}*P3/100,0)',                # small
 ]
 
 
